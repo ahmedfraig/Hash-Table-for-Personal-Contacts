@@ -76,9 +76,9 @@ hash = HashTable(5)
 hash.set_value_of_given_key("Mohamed Hisham" , "0122")
 hash.set_value_of_given_key("Ahmed Ismail" , "0100")
 hash.set_value_of_given_key("Islam Mahmoud" , "0134")
-hash.set_value_of_given_key("Mahmoud Ahmed" , "0157")
-hash.set_value_of_given_key("Mohamed Ahmed" , "0157")
-hash.set_value_of_given_key("Eyad Ahmed" , "0157")
+hash.set_value_of_given_key("Mahmoud Ahmed" , "0119")
+hash.set_value_of_given_key("Mohamed Ahmed" , "0179")
+hash.set_value_of_given_key("Eyad Ahmed" , "0147")
 
 print(hash.hash_table)
 key = "Ahmed Ismail"
