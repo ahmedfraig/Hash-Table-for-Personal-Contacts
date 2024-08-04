@@ -1,5 +1,9 @@
-class Hash_table:
-    def calc_hash( key , table_size ):
+class HashTable:
+    def __init__( self , size ) :
+        self.size = size
+        self.hash_table = [() for _ in range(size)]
+
+    def calc_hash( self , key ):
         l = len(key)
         hash = 0
         for i in range(l):
@@ -10,5 +14,14 @@ class Hash_table:
         hash ^= (hash >> 11)
         hash += (hash << 15)
         if hash > 0 :
-            return hash
-        return hash % table_size
+            return hash % self.size
+        return -hash % self.size
+    
+    def value_of_given_key ( self , key ):
+        index = self.calc_hash(key)
+        while index < self.size and self.hash_table[index] != ():
+            k, value = self.hash_table[index]
+            if k == key :
+                return value
+            index += 1
+        return -1 
